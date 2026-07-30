@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amigos do Sertão - Artesanato & Decoração Brasileira</title>
+  <meta name="description" content="Loja de artesanato autêntico do Sertão Brasileiro. Vasos de barro, cerâmicas, cestarias em carnaúba e esculturas exclusivas feitas por mestres artesãos do Nordeste." />
+  <meta name="keywords" content="artesanato sertao, vasos de barro, ceramica nordestina, cesto de palha, decoracao artesanal, mestre vitalino, caruaru" />
+
+  <!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Estilos CSS3 Puros -->
+  <link rel="stylesheet" href="/css/style.css" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/assets/icones/logo-mandacaru.svg" />
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="header-top-bar">
+    🌿 texto em caso de frete grátis ou semelhantes <strong>teste</strong> 
+  </div>
+
+  <!-- Header Fixo & Navegação -->
+  <header class="site-header" id="header">
+    <div class="container header-container">
+      
+      <!-- Logotipo da Loja -->
+      <a href="#hero" class="brand-logo" aria-label="Amigos do Sertão - Página Inicial">
+        <img src="/assets/icones/logo-mandacaru.svg" alt="Logotipo Mandacaru Amigos do Sertão" />
+        <div class="brand-text">
+        <span class="brand-name">Amigos do<p>Sertão</span> 
+        </div>
+      </a>
+
+      <!-- Menu de Navegação Principal -->
+      <nav class="nav-menu" id="navMenu">
+        <a href="#hero" class="nav-link active">Início</a>
+        <a href="#diferenciais" class="nav-link">Diferenciais</a>
+        <a href="#localizacao" class="nav-link">Localização</a>
+        <!-- <a href="#produtos" class="nav-link">Produtos</a> -->
+        <a href="#historia" class="nav-link">Nossa História</a>
+        <a href="#galeria" class="nav-link">Galeria</a>
+        <a href="#depoimentos" class="nav-link">Depoimentos</a>
+        <a href="#contato" class="nav-link">Contato</a>
+      </nav>
+
+      <!-- Ações do Cabeçalho -->
+      <div class="header-actions">
+        <!-- Botão Favoritos -->
+        <!-- <button class="btn-icon" id="wishlistBtn" aria-label="Ver Favoritos">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l8.72-8.72 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+          </svg>
+          <span class="badge-count" id="wishlistBadge">0</span>
+        </button> -->
+
+        <!-- Botão Carrinho de Compras -->
+        <!-- <button class="btn-icon" id="cartBtn" aria-label="Abrir Carrinho de Compras">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <path d="M16 10a4 4 0 0 1-8 0"/>
+          </svg>
+          <span class="badge-count" id="cartBadge">0</span>
+        </button> -->
+
+        <!-- CTA "Comprar Agora" -->
+        <!-- <a href="#produtos" class="btn btn-primary" style="padding: 0.65rem 1.4rem; font-size: 0.9rem;">
+          Comprar Agora
+        </a> -->
+
+        <!-- Menu Mobile Toggle -->
+        <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Abrir Menu">
+          ☰
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <main>
+    <!-- ====================================================================
+         HERO SECTION
+         ==================================================================== -->
+    <section class="hero-section" id="hero">
+      <div class="container">
+        <div class="hero-grid">
+          
+          <!-- Conteúdo do Hero -->
+          <div class="hero-content">
+            <div class="hero-badge">
+              ✨ 100% Feito à Mão no Sertão Brasileiro
+            </div>
+
+            <div class="top-bar-hero"> 
+              <h1 class="hero-title">
+                Loja de Artesanato <span>Amigos do Sertão</span>
+              </h1>
+
+              <img src="/assets/imagens/logo.png" alt="Logo Amigos do Sertão" height="170px" width="170px">
+            </div>
+ 
+            <p class="hero-subtitle">
+              Peças artesanais exclusivas em cerâmica, barro e fibra vegetal. Cada vaso, cesto e escultura carrega a essência, a alma e a história dos mestres artesãos do Nordeste.
+            </p>
+            
+            <div class="hero-buttons">
+              <a href="#historia" class="btn btn-outline">
+                Nossa História
+              </a>
+              <a href="#contato" class="btn btn-primary">
+                Contato
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+                </svg>
+              </a> 
+
+            </div>
+
+            <!-- Métricas e Prova Social -->
+            <div class="hero-stats">
+              <div class="stat-item">
+                <span class="stat-number">+150</span>
+                <span class="stat-label">Artesãos Impactados</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">100%</span>
+                <span class="stat-label">Produção Sustentável</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">5★</span>
+                <span class="stat-label">+5.000 Clientes</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mídia Visual / Banner do Hero -->
+          <div class="hero-media">
+            <div class="hero-image-wrapper">
+
+              <div class="carrossel">
+                  <div class="slides">
+                    <img src="/assets/imagens/vertical03.jpeg" alt="Moringa e Vasos de Barro Amigos do Sertão" onerror="this.src='https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=80';" />
+                    <img src="/assets/imagens/vertical02.jpeg" alt="Moringa e Vasos de Barro Amigos do Sertão">
+                    <img src="/assets/imagens/vertical04.jpeg" alt="Moringa e Vasos de Barro Amigos do Sertão">
+                    <img src="/assets/imagens/produto3.jpeg" alt="Moringa e Vasos de Barro Amigos do Sertão">
+                    <img src="/assets/imagens/produto1.jpeg" alt="Moringa e Vasos de Barro Amigos do Sertão">
+                    <img src="/assets/imagens/produto2.jpeg" alt="Moringa e Vasos de Barro Amigos do Sertão">
+                  </div>
+                  <button class="esquerda">&#10094;</button>
+                  <button class="direita">&#10095;</button>
+                </div>
+
+            </div>
+
+            <!-- Card Flutuante de Destaque -->
+            <!-- <div class="hero-floating-card">
+              <div class="floating-card-icon">🏺</div>
+              <div class="floating-card-text">
+                <strong>Barro Terracota Autêntico</strong>
+                <span>Directly from Pernambuco & Bahia</span>
+              </div>
+            </div> -->
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="diferenciais-section" id="localizacao">
+      <div class="container">
+        
+        <div class="section-header">
+          
+          <span class="section-tag">Endereço</span>
+          <h2 class="section-title">Nossa localização</h2>
+          <p class="section-subtitle">Venha conhecer nossa loja!</p>
+        </div>
+
+        <div class="maps">
+          <p class="section-subtitle"> 📍 Rod. MG 040, 2144 - Vila dos Pinheiros, Ibirité - MG, 32400-000 </p>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1874.3312146599987!2d-44.07461563904699!3d-20.022677793067725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa6b90073277cc7%3A0xf5722a4849c9a5f!2sAmigos%20do%20Sert%C3%A3o%20%7C%20Loja%20de%20Artesanato%20em%20Ibirit%C3%A9!5e0!3m2!1spt-BR!2sbr!4v1784749743739!5m2!1spt-BR!2sbr" width="90%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+
+        </div>
+    </section>
+
+    <!-- ====================================================================
+         SEÇÃO DE DIFERENCIAIS
+         ==================================================================== -->
+    <section class="diferenciais-section" id="diferenciais">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-tag">Por Que Escolher Nossas Peças</span>
+          <h2 class="section-title">Valores Que Enriquecem Seu Ambiente</h2>
+          <p class="section-subtitle">Mais do que decoração, uma conexão direta com a essência e a cultura brasileira.</p>
+        </div>
+
+        <div class="diferenciais-grid">
+          
+          <!-- Diferencial 1 -->
+          <div class="diferencial-card">
+            <div class="diferencial-icon">
+              <img src="/assets/icones/icone-artesanal.svg" alt="Produção Artesanal" />
+            </div>
+            <h3 class="diferencial-title">Produção Artesanal</h3>
+            <p class="diferencial-desc">Peças modeladas e queimadas à mão com técnicas ancestrais passadas por gerações de artesãos.</p>
+          </div>
+
+          <!-- Diferencial 2 -->
+          <div class="diferencial-card">
+            <div class="diferencial-icon">
+              <img src="/assets/icones/icone-brasil.svg" alt="Feito por Artesãos Brasileiros" />
+            </div>
+            <h3 class="diferencial-title">Feito por Artesãos Brasileiros</h3>
+            <p class="diferencial-desc">Valorização direta da economia de polos criativos como Caruaru, Tracunhaém e o Vale do Jequitinhonha.</p>
+          </div>
+
+          <!-- Diferencial 3 -->
+          <div class="diferencial-card">
+            <div class="diferencial-icon">
+              <img src="/assets/icones/icone-sustentavel.svg" alt="Produtos Sustentáveis" />
+            </div>
+            <h3 class="diferencial-title">Produtos Sustentáveis</h3>
+            <p class="diferencial-desc">Matérias-primas ecológicas como barro natural, pigmentos minerais e palha de carnaúba de manejo consciente.</p>
+          </div>
+
+          <!-- Diferencial 4 -->
+          <div class="diferencial-card">
+            <div class="diferencial-icon">
+              <img src="/assets/icones/icone-exclusivo.svg" alt="Peças Exclusivas" />
+            </div>
+            <h3 class="diferencial-title">Peças Exclusivas</h3>
+            <p class="diferencial-desc">Cada criação possui marcas únicas do mestre artesão, tornando seu objeto de decoração singular.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         PRODUTOS EM DESTAQUE (CATÁLOGO REATIVO)
+         ==================================================================== -->
+    <!--<section class="produtos-section" id="produtos">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-tag">Coleção Sertaneja</span>
+          <h2 class="section-title">Nossas Peças em Destaque</h2>
+          <p class="section-subtitle">Explore criações únicas feitas para trazer calor, elegância e ancestralidade ao seu lar.</p>
+        </div>
+
+        <div class="produtos-controls">
+          
+          <div class="produtos-filter-tabs">
+            <button class="tab-btn active" data-category="todos">Todas as Peças</button>
+            <button class="tab-btn" data-category="barro">Vasos de Barro</button>
+            <button class="tab-btn" data-category="ceramica">Cerâmicas</button>
+            <button class="tab-btn" data-category="cestaria">Cestarias & Fibras</button>
+            <button class="tab-btn" data-category="escultura">Esculturas & Cordel</button>
+          </div>
+
+          <div class="produtos-search-sort">
+            <div class="search-box">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
+              </svg>
+              <input type="text" id="productSearchInput" placeholder="Buscar por peça, artesão ou estado (ex: Caruaru)..." />
+            </div>
+
+            <div class="sort-box">
+              <label for="productSortSelect" style="font-size: 0.85rem; font-weight: 600; color: var(--color-marrom-dark);">Ordenar por:</label>
+              <select id="productSortSelect">
+                <option value="relevancia">Relevância</option>
+                <option value="preco-asc">Menor Preço</option>
+                <option value="preco-desc">Maior Preço</option>
+                <option value="avaliacao">Mais Bem Avaliados</option>
+              </select>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="produtos-grid" id="produtosGrid">
+        </div>
+
+      </div>
+    </section> -->
+
+    <!-- ====================================================================
+         SEÇÃO NOSSA HISTÓRIA
+         ==================================================================== -->
+    <section class="historia-section" id="historia">
+      <div class="container">
+        <div class="historia-grid">
+          
+          <!-- Mídia Visual -->
+          <div class="historia-media">
+            <img src="/assets/imagens/vertical03.jpeg" alt="Mestre Artesão moldando barro" class="historia-img-main" onerror="this.src='https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=1000&q=80';" />
+            <div class="historia-badge-map">
+            </div>
+          </div>
+
+          <!-- Texto e Narrativa -->
+          <div class="historia-content">
+            <span class="section-tag">Nossa Essência</span>
+            <h2 class="section-title">Honrando as Mãos do Sertão Brasileiro</h2>
+            
+            <p class="historia-text">
+              A <strong>Amigos do Sertão</strong> nasceu da paixão por preservar e expandir a rica cultura do semiárido brasileiro. Trabalhamos lado a lado com mais de 150 famílias de artesãos em povoados e comunidades rurais do Nordeste.
+            </p>
+            <p class="historia-text">
+              Garantimos um comércio justo e transparente, onde cada vaso esculpido em barro, cada cesto trançado em fibra de carnaúba e cada escultura em cerâmica remunera dignamente os mestres da nossa terra.
+            </p>
+
+            <blockquote class="historia-quote">
+              <p>“Cada grama de barro que moldamos sob as mãos carrega o calor do sol do Sertão, a memória dos nossos antepassados e a poesia da nossa terra.”</p>
+              <cite>— Mestre Vitalino Inspired / Polo de Caruaru - PE</cite>
+            </blockquote>
+
+            <a href="#produtos" class="btn btn-secondary">
+              Conheça as Peças dos Mestres
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         GALERIA DE IMAGENS (ESTILO MASONRY / GRID)
+         ==================================================================== -->
+    <section class="galeria-section" id="galeria">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-tag">Galeria Amigos do Sertão</span>
+          <h2 class="section-title">A Poesia do Sertão no Seu Lar</h2>
+          <p class="section-subtitle">Inspire-se com arranjos reais e combinações de decoração em ambientes contemporâneos.</p>
+        </div>
+
+        <div class="galeria-grid">
+          
+          <!-- Galeria Item 1 (Tall) -->
+          <div class="galeria-item tall" data-title="Moringa Terracota em Cantinho do Café">
+            <img src="/assets/imagens/produto1.jpeg" alt="Moringa Terracota em Cantinho do Café" onerror="this.src='https://images.unsplash.com/photo-1610701596007-11502861dcfa?auto=format&fit=crop&w=800&q=80';" />
+            <div class="galeria-overlay">
+              <h3 class="galeria-overlay-title">Vaso Azul</h3>
+              <p class="galeria-overlay-desc">Frescor natural em cantinho do café</p>
+            </div>
+          </div>
+
+          <!-- Galeria Item 2 -->
+          <div class="galeria-item" data-title="Cesto em Fibra de Carnaúba em Varanda Integrada">
+            <img src="/assets/imagens/produto2.jpeg" alt="Cesto de Carnaúba" onerror="this.src='https://images.unsplash.com/photo-1590736704728-f4730bb30770?auto=format&fit=crop&w=800&q=80';" />
+            <div class="galeria-overlay">
+              <h3 class="galeria-overlay-title">Vaso de barro</h3>
+              <p class="galeria-overlay-desc">Passou verniz nele </p>
+            </div>
+          </div>
+
+          <!-- Galeria Item 3 (Wide) -->
+          <div class="galeria-item wide" data-title="Composição de Vasos de Barro com Plantas de Sertão">
+            <img src="/assets/imagens/produto5.jpeg" alt="Composição de Vasos de Barro" onerror="this.src='https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=1200&q=80';" />
+            <div class="galeria-overlay">
+              <h3 class="galeria-overlay-title">Mesa bonita</h3>
+              <p class="galeria-overlay-desc">Vários produtos na mesa</p>
+            </div>
+          </div>
+
+          <!-- Galeria Item 4 -->
+          <div class="galeria-item" data-title="Escultura Retirantes em Estante Mínima">
+            <img src="/assets/imagens/produto4.jpeg" alt="Escultura Retirantes" onerror="this.src='https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?auto=format&fit=crop&w=800&q=80';" />
+            <div class="galeria-overlay">
+              <h3 class="galeria-overlay-title">Ave</h3>
+              <p class="galeria-overlay-desc">Espécie: Gavião</p>
+            </div>
+          </div>
+
+          <!-- Galeria Item 5 -->
+          <div class="galeria-item" data-title="Pratos de Cerâmica Serra da Capivara em Parede Galeria">
+            <img src="/assets/imagens/produto3.jpeg" alt="Pratos Decorativos" onerror="this.src='https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=800&q=80';" />
+            <div class="galeria-overlay">
+              <h3 class="galeria-overlay-title">Boi Ben</h3>
+              <p class="galeria-overlay-desc">Saudades eternas do Boi Ben</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         DEPOIMENTOS DE CLIENTES
+         ==================================================================== -->
+    <section class="depoimentos-section" id="depoimentos">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-tag">Depoimentos Reais</span>
+          <h2 class="section-title">O Que Dizem Nossos Clientes</h2>
+          <p class="section-subtitle">Histórias de quem já transformou o ambiente com as peças Amigos do Sertão.</p>
+        </div>
+
+        <div class="depoimentos-slider">
+          <!-- Card de Depoimento (Injetado via JS) -->
+          <div class="depoimento-card" id="depoimentoCard">
+            <!-- Conteúdo dinâmico -->
+          </div>
+
+          <!-- Controles do Carrossel -->
+          <div class="depoimentos-nav">
+            <button class="btn-icon" id="prevTestimonial" aria-label="Depoimento Anterior">‹</button>
+            <div class="slider-dots" id="sliderDots"></div>
+            <button class="btn-icon" id="nextTestimonial" aria-label="Próximo Depoimento">›</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         CHAMADA PARA AÇÃO (CTA) & NEWSLETTER
+         ==================================================================== -->
+    <section class="cta-section" id="contato">
+      <div class="container">
+        <!-- <div class="cta-container"> -->
+          
+          <!-- <div class="cta-content">
+            <span class="section-tag">Cupom de Boas-Vindas</span>
+            <h2 class="cta-title">Leve a Alma do Sertão Para o Seu Lar</h2>
+            <p class="cta-desc">
+              Inscreva-se no nosso clube de cultura e ganhe <strong>10% OFF</strong> na sua primeira compra + um e-book exclusivo sobre História do Artesanato Nordestino.
+            </p>
+          </div> -->
+
+           <!-- Formulário da Newsletter  -->
+          <form class="cta-form" id="ctaNewsletterForm">
+            <h3>Receber Cupom de 10% OFF</h3>
+            <p>Digite seu melhor e-mail abaixo:</p>
+            
+            <div class="form-group">
+              <input type="text" placeholder="Seu Nome Completo" required />
+            </div>
+            
+            <div class="form-group">
+              <input type="email" placeholder="seuemail@exemplo.com" required />
+            </div>
+
+            <button href="https://wa.me/5531973516636?text=Ol%C3%A1!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20as%20pe%C3%A7as%20da%20loja%20Amigos%20do%20Sert%C3%A3o" type="submit" class="btn btn-primary">
+              Entrar em contato
+            </button> 
+          </form>
+
+        <!-- </div> -->
+      </div>
+    </section> 
+  </main>
+
+  <!-- ====================================================================
+       RODAPÉ (FOOTER)
+       ==================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <!-- Coluna 1: Sobre a Loja -->
+        <div class="footer-brand">
+          <a href="#hero" class="brand-logo">
+            <img src="/assets/icones/logo-mandacaru.svg" alt="Amigos do Sertão" />
+            <div class="brand-text">
+              <span class="brand-name">Amigos do Sertão</span>
+              <span class="brand-tagline" style="color: var(--color-sol);">Loja de Artesanato</span>
+            </div>
+          </a>
+          <p>
+            Plataforma dedicada a promover, apoiar e comercializar o verdadeiro artesanato do Sertão Nordestino com respeito, comércio justo e valorização cultural.
+          </p>
+          <div class="footer-socials">
+            <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwj2ztvQ0OmVAxVYqpUCHZCqN6AQFnoECDYQAQ&url=https%3A%2F%2Fwww.instagram.com%2Famigosdosertaoloja%2F&usg=AOvVaw062FsZEXxlVsN2t-65Ftf5&opi=89978449" class="social-link" aria-label="Instagram">📸</a>
+            <a href="https://wa.me/5531973516636?text=Ol%C3%A1!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20as%20pe%C3%A7as%20da%20loja%20Amigos%20do%20Sert%C3%A3o" class="social-link" aria-label="WhatsApp">💬</a>
+          </div>
+        </div>
+
+        <!-- Coluna 2: Navegação Rápida -->
+        <!-- <div>
+          <h4 class="footer-title">Navegação</h4>
+          <ul class="footer-links">
+            <li><a href="#hero">Início</a></li>
+            <li><a href="#diferenciais">Diferenciais</a></li>
+            <li><a href="#produtos">Produtos em Destaque</a></li>
+            <li><a href="#historia">Nossa História</a></li>
+            <li><a href="#galeria">Galeria Inspiradora</a></li>
+          </ul>
+        </div> -->
+
+        <!-- Coluna 3: Categorias -->
+        <!-- <div>
+          <h4 class="footer-title">Categorias</h4>
+          <ul class="footer-links">
+            <li><a href="#produtos">Vasos de Barro Terracota</a></li>
+            <li><a href="#produtos">Moringas Tradicionais</a></li>
+            <li><a href="#produtos">Cestarias de Carnaúba</a></li>
+            <li><a href="#produtos">Esculturas e Cerâmicas</a></li>
+            <li><a href="#produtos">Objetos em Xilogravura</a></li>
+          </ul>
+        </div> -->
+
+        <!-- Coluna 4: Contato & Atendimento -->
+        <div>
+          <h4 class="footer-title">Atendimento</h4>
+          <div class="footer-contact-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <span>contato@amigosdosertao.com.br</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <span>(31) 97351-6636 (WhatsApp)</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Rod. MG 040, 2144 - Vila dos Pinheiros, Ibirité-MG, 32400-000</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>©2026 Amigos do Sertão - Todos os direitos reservados. Feito com carinho por Guilherme Gonçalves.</p>
+        <!-- <p>Pagamentos Seguros via Pix, Cartão e Boleto</p> -->
+      </div>
+    </div>
+  </footer>
+
+  <!-- ====================================================================
+       DRAWERS E MODAIS INTERATIVOS
+       ==================================================================== -->
+  
+  <!-- Overlay Escuro de Fundo -->
+  <div class="modal-overlay" id="modalOverlay"></div>
+
+  <!-- Slide-out Carrinho de Compras (Cart Drawer) -->
+  <!-- <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h3>Seu Carrinho do Sertão</h3>
+      <button class="cart-close-btn" id="cartCloseBtn" aria-label="Fechar Carrinho">✕</button>
+    </div>
+
+    <div class="cart-body" id="cartItemsContainer">
+       Itens inseridos dinamicamente 
+    </div>
+
+    <div class="cart-footer">
+      <div class="free-shipping-progress">
+        <p id="freeShippingText" style="font-size: 0.85rem;">Faltam R$ 61,00 para Frete Grátis!</p>
+        <div class="shipping-bar-bg">
+          <div class="shipping-bar-fill" id="freeShippingBarFill"></div>
+        </div>
+      </div>
+
+      <div class="cart-summary-line">
+        <span>Subtotal:</span>
+        <strong id="cartSubtotal">R$ 0,00</strong>
+      </div>
+
+      <button class="btn btn-primary" style="width: 100%; text-align: center;" onclick="alert('🎉 Simulação de Pedido! Seu pedido foi encaminhado com sucesso com Frete Grátis e pagamento via Pix!')">
+        Finalizar Compra Segura
+      </button>
+    </div>
+  </div>
+
+  Modal Quick View (Espiada Rápida) 
+  <div class="quickview-modal" id="quickviewModal">
+    <button class="quickview-close" id="quickviewClose">✕</button>
+    <div class="quickview-content">
+      <div class="quickview-media">
+        <img id="qvImage" src="" alt="Produto" />
+      </div>
+      <div class="quickview-details">
+        <span id="qvArtisan" style="font-size: 0.8rem; font-weight: 700; color: var(--color-terracota); text-transform: uppercase;"></span>
+        <h2 id="qvTitle" style="font-family: var(--font-family-display); font-size: 1.6rem; color: var(--color-marrom-dark); margin: 0.4rem 0;"></h2>
+        <span id="qvPrice" style="font-size: 1.5rem; font-weight: 800; color: var(--color-marrom-dark); margin-bottom: 1rem;"></span>
+        
+        <p id="qvDescription" style="font-size: 0.95rem; color: var(--color-text-muted); margin-bottom: 1.2rem; line-height: 1.6;"></p>
+        
+        <div style="font-size: 0.88rem; background-color: var(--color-bg); padding: 0.8rem; border-radius: var(--radius-sm); margin-bottom: 1.5rem;">
+          <p><strong>Dimensões:</strong> <span id="qvDimensions"></span></p>
+          <p><strong>Composição:</strong> <span id="qvMaterial"></span></p>
+        </div>
+
+        <div style="display: flex; gap: 1rem; align-items: center; margin-top: auto;">
+          <input type="number" id="qvQuantity" value="1" min="1" max="10" style="width: 60px; padding: 0.6rem; border-radius: var(--radius-sm); border: 1px solid var(--color-border); text-align: center;" />
+          <button class="btn btn-primary" id="qvAddToCart" style="flex: 1;">
+            Adicionar ao Carrinho
+          </button>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+  <!-- Modal Lightbox para Imagens da Galeria -->
+  <div class="lightbox-modal" id="lightboxModal">
+    <button class="lightbox-close" id="lightboxClose">✕</button>
+    <div class="lightbox-content">
+      <img id="lightboxImage" src="" alt="Galeria" />
+      <p class="lightbox-caption" id="lightboxCaption"></p>
+    </div>
+  </div>
+
+  <!-- Toast Container para Notificações Flutuantes -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Ações Flutuantes (WhatsApp & Back To Top) -->
+  <div class="floating-actions">
+    <a href="https://wa.me/5531973516636?text=Ol%C3%A1!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20as%20pe%C3%A7as%20da%20loja%20Amigos%20do%20Sert%C3%A3o" target="_blank" rel="noopener noreferrer" class="btn-floating btn-whatsapp" title="Falar no WhatsApp">
+      💬
+    </a>
+    <button class="btn-floating btn-back-top" id="backToTopBtn" title="Voltar ao Topo">
+      ↑
+    </button>
+  </div>
+
+  <!-- JavaScript Puro -->
+  <script src="/js/script.js" defer></script>
+</body>
+</html>

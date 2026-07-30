@@ -1,0 +1,6 @@
+{
+  "name": "Amigos do Sertão - Artesanato Brasileiro",
+  "description": "Landing page e catálogo da loja de artesanato Amigos do Sertão com peças exclusivas, vasos de barro, cerâmicas e cestarias.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

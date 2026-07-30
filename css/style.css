@@ -1,0 +1,2040 @@
+/* ==========================================================================
+   AMIGOS DO SERTÃO - ARTESANATO BRASILEIRO
+   Tema: Bento Grid (Design System)
+   Identidade: Terracota #C05E42, Verde Cacto #4A5D4E, Areia #f5f5f0,
+              Marrom Terroso #5D4037 / #42332a, Off-White #F2EDE4 & Border #e5e5d1
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Variáveis Globais & Bento Tokens
+   -------------------------------------------------------------------------- */
+:root {
+  /* Paleta Bento Grid */
+  --color-terracota: #C05E42;
+  --color-terracota-light: #D96B43;
+  --color-terracota-dark: #9E3A1A;
+  
+  --color-verde-cacto: #4A5D4E;
+  --color-verde-cacto-light: #5B7360;
+  --color-verde-cacto-dark: #37463A;
+
+  --color-areia: #f5f5f0;
+  --color-areia-medium: #e8e4d9;
+  --color-areia-dark: #d8d8ce;
+
+  --color-marrom: #5D4037;
+  --color-marrom-dark: #42332a;
+  --color-marrom-light: #7A594E;
+
+  --color-sol: #E29A3B;
+  --color-sol-light: #F3B254;
+
+  --color-bg: #f5f5f0;
+  --color-surface: #FFFFFF;
+  --color-card-beige: #F2EDE4;
+  --color-text-main: #42332a;
+  --color-text-muted: #6E5C4E;
+  --color-border: #e5e5d1;
+
+  /* Tipografia */
+  --font-family-display: 'Playfair Display', Georgia, serif;
+  --font-family-body: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+
+  /* Sombras Bento Grid */
+  --shadow-sm: 0 2px 8px rgba(66, 51, 42, 0.04);
+  --shadow-md: 0 6px 20px rgba(66, 51, 42, 0.08);
+  --shadow-lg: 0 12px 32px rgba(66, 51, 42, 0.12);
+  --shadow-hover: 0 16px 40px rgba(192, 94, 66, 0.16);
+
+  /* Transições & Bento Border Radii */
+  --radius-sm: 10px;
+  --radius-md: 18px;
+  --radius-lg: 28px;
+  --radius-xl: 36px;
+  --radius-full: 9999px;
+  
+  --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-normal: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-bounce: 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* Layout Container */
+  --max-width: 1280px;
+}
+
+/* --------------------------------------------------------------------------
+   2. Reset & Estilos Base
+   -------------------------------------------------------------------------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-family-body);
+  background-color: var(--color-bg);
+  color: var(--color-text-main);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+input, select, textarea {
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+/* Utilitários de Layout Bento Grid */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.section-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 3rem auto;
+}
+
+.section-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 1.1rem;
+  background-color: rgba(74, 93, 78, 0.1);
+  color: var(--color-verde-cacto);
+  font-weight: 700;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  border-radius: var(--radius-full);
+  margin-bottom: 0.8rem;
+  border: 1px solid rgba(74, 93, 78, 0.18);
+}
+
+.section-title {
+  font-family: var(--font-family-display);
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  color: var(--color-text-main);
+  line-height: 1.2;
+  margin-bottom: 0.8rem;
+  font-style: italic;
+}
+
+.section-subtitle {
+  color: var(--color-text-muted);
+  font-size: 1.05rem;
+}
+
+/* --------------------------------------------------------------------------
+   3. Botões & Elementos Interativos
+   -------------------------------------------------------------------------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.85rem 1.8rem;
+  font-weight: 700;
+  font-size: 0.88rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border-radius: var(--radius-full);
+  transition: all var(--transition-normal);
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background-color: var(--color-verde-cacto);
+  color: #FFFFFF;
+  box-shadow: 0 4px 14px rgba(74, 93, 78, 0.25);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-verde-cacto-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+}
+
+.btn-secondary {
+  background-color: var(--color-terracota);
+  color: #FFFFFF;
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-terracota-light);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(192, 94, 66, 0.25);
+}
+
+.btn-outline {
+  border: 2px solid var(--color-verde-cacto);
+  color: var(--color-verde-cacto);
+  background-color: transparent;
+}
+
+.btn-outline:hover {
+  background-color: var(--color-verde-cacto);
+  color: #FFFFFF;
+  transform: translateY(-2px);
+}
+
+.btn-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FFFFFF;
+  border: 1px solid var(--color-border);
+  color: var(--color-text-main);
+  transition: all var(--transition-fast);
+  position: relative;
+}
+
+.btn-icon:hover {
+  background-color: var(--color-terracota);
+  color: #FFFFFF;
+  border-color: var(--color-terracota);
+  transform: scale(1.06);
+}
+
+/* Badges e Contadores */
+.badge-count {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background-color: var(--color-terracota);
+  color: #FFFFFF;
+  font-size: 0.72rem;
+  font-weight: 800;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #FFFFFF;
+}
+
+/* --------------------------------------------------------------------------
+   4. Header Fixo & Navegação
+   -------------------------------------------------------------------------- */
+.header-top-bar {
+  background-color: var(--color-verde-cacto-dark);
+  color: var(--color-areia);
+  font-size: 0.82rem;
+  padding: 0.45rem 0;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.header-top-bar strong {
+  color: var(--color-sol);
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: rgba(245, 245, 240, 0.88);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--color-border);
+  transition: all var(--transition-normal);
+}
+
+.site-header.scrolled {
+  box-shadow: var(--shadow-sm);
+  background-color: rgba(255, 255, 255, 0.96);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 76px;
+  gap: 1.5rem;
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+}
+
+.brand-logo img {
+  width: 70px;
+  height: 70px;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-name {
+  font-family: var(--font-family-display);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--color-verde-cacto);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+
+.brand-tagline {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--color-terracota);
+  font-weight: 700;
+}
+
+/* Menu de Navegação */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 1.8rem;
+}
+
+.nav-link {
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-marrom);
+  position: relative;
+  padding: 0.4rem 0;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-terracota);
+  transition: width var(--transition-normal);
+  border-radius: var(--radius-full);
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--color-terracota);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.mobile-nav-toggle {
+  display: none;
+  font-size: 1.5rem;
+  color: var(--color-marrom-dark);
+  padding: 0.5rem;
+}
+
+/* --------------------------------------------------------------------------
+   5. Hero Section (Bento Grid Style)
+   -------------------------------------------------------------------------- */
+.hero-section {
+  padding: 2.5rem 0 3.5rem 0;
+  position: relative;
+  background-color: var(--color-bg);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+/* Bento Card Principal do Hero */
+.hero-content {
+  background-color: var(--color-areia-medium);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  padding: 3.5rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.top-bar-hero {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-content::before {
+  content: '';
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(192, 94, 66, 0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.45rem 1.1rem;
+  background-color: #FFFFFF;
+  border: 1px solid var(--color-border);
+  color: var(--color-verde-cacto);
+  font-weight: 700;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  border-radius: var(--radius-full);
+  margin-bottom: 1.5rem;
+  width: fit-content;
+}
+
+.hero-title {
+  font-family: var(--font-family-display);
+  font-size: clamp(2.2rem, 4.2vw, 3.2rem);
+  color: var(--color-marrom-dark);
+  line-height: 1.12;
+  margin-bottom: 1.2rem;
+  font-style: italic;
+  letter-spacing: -0.02em;
+}
+
+.hero-title span {
+  color: var(--color-terracota);
+  position: relative;
+  display: inline-block;
+  font-style: italic;
+}
+
+.hero-subtitle {
+  font-size: 1.08rem;
+  color: var(--color-text-muted);
+  margin-bottom: 2.2rem;
+  max-width: 540px;
+  line-height: 1.6;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.hero-stats {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding-top: 1.8rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-number {
+  font-family: var(--font-family-display);
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: var(--color-verde-cacto);
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Bento Card Mídia do Hero */
+.hero-media {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.carrossel {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 540px;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+
+/* .slides img {
+  height: 100%;
+  width: 100%
+  flex-shrink: 0; 
+  display: block; 
+  object-fit: cover;
+} */
+
+.esquerda,
+.direita {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.35);
+  color: #fff;
+  border: none;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  font-size: 1.3rem;
+  line-height: 1;
+}
+
+.esquerda { left: 10px; }
+.direita { right: 10px; }
+
+.hero-image-wrapper {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border);
+  height: 95%;
+  min-height: 400px;
+  background-color: #FFFFFF;
+}
+
+.hero-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-normal);
+}
+
+.hero-image-wrapper:hover img {
+  transform: scale(1.03);
+}
+
+.hero-floating-card {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  background-color: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(10px);
+  padding: 1.2rem 1.5rem;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border: 1px solid var(--color-border);
+}
+
+.floating-card-icon {
+  width: 42px;
+  height: 42px;
+  background-color: rgba(192, 94, 66, 0.12);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-terracota);
+  font-size: 1.3rem;
+}
+
+.floating-card-text strong {
+  display: block;
+  font-size: 0.92rem;
+  color: var(--color-marrom-dark);
+  font-family: var(--font-family-display);
+}
+
+.floating-card-text span {
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+
+/* --------------------------------------------------------------------------
+   6. Seção de Diferenciais (Asymmetric Bento Grid)
+   -------------------------------------------------------------------------- */
+.diferenciais-section {
+  padding: 3.5rem 0;
+  background-color: var(--color-bg);
+}
+
+.diferenciais-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+
+.diferencial-card {
+  padding: 2.2rem 1.8rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  transition: all var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 240px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Bento Color Variations for Visual Rhythm */
+.diferenciais-grid .diferencial-card:nth-child(1) {
+  background-color: var(--color-verde-cacto);
+  color: #FFFFFF;
+  border-color: var(--color-verde-cacto);
+}
+.diferenciais-grid .diferencial-card:nth-child(1) .diferencial-title {
+  color: #FFFFFF;
+}
+.diferenciais-grid .diferencial-card:nth-child(1) .diferencial-desc {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.diferenciais-grid .diferencial-card:nth-child(2) {
+  background-color: #FFFFFF;
+  color: var(--color-text-main);
+}
+
+.diferenciais-grid .diferencial-card:nth-child(3) {
+  background-color: var(--color-card-beige);
+  color: var(--color-text-main);
+}
+
+.diferenciais-grid .diferencial-card:nth-child(4) {
+  background-color: var(--color-terracota);
+  color: #FFFFFF;
+  border-color: var(--color-terracota);
+}
+.diferenciais-grid .diferencial-card:nth-child(4) .diferencial-title {
+  color: #FFFFFF;
+}
+.diferenciais-grid .diferencial-card:nth-child(4) .diferencial-desc {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.diferencial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.diferencial-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-md);
+  background-color: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  transition: transform var(--transition-bounce);
+}
+
+.diferenciais-grid .diferencial-card:nth-child(2) .diferencial-icon,
+.diferenciais-grid .diferencial-card:nth-child(3) .diferencial-icon {
+  background-color: rgba(74, 93, 78, 0.08);
+}
+
+.diferencial-card:hover .diferencial-icon {
+  transform: scale(1.1) rotate(4deg);
+}
+
+.diferencial-title {
+  font-family: var(--font-family-display);
+  font-size: 1.3rem;
+  font-style: italic;
+  color: var(--color-marrom-dark);
+  margin-bottom: 0.5rem;
+}
+
+.diferencial-desc {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+/* --------------------------------------------------------------------------
+   7. Produtos em Destaque & Catálogo (Bento Cards)
+   -------------------------------------------------------------------------- */
+.produtos-section {
+  padding: 4rem 0;
+  background-color: var(--color-bg);
+}
+
+.produtos-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin-bottom: 2.5rem;
+}
+
+.produtos-filter-tabs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.tab-btn {
+  padding: 0.6rem 1.3rem;
+  border-radius: var(--radius-full);
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  background-color: #FFFFFF;
+  color: var(--color-text-muted);
+  border: 1px solid var(--color-border);
+  transition: all var(--transition-fast);
+}
+
+.tab-btn:hover,
+.tab-btn.active {
+  background-color: var(--color-verde-cacto);
+  color: #FFFFFF;
+  border-color: var(--color-verde-cacto);
+  box-shadow: 0 4px 12px rgba(74, 93, 78, 0.2);
+}
+
+.produtos-search-sort {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  background-color: #FFFFFF;
+  padding: 0.8rem 1.4rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex: 1;
+  min-width: 240px;
+  background-color: var(--color-bg);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--color-border);
+}
+
+.search-box input {
+  border: none;
+  background: none;
+  width: 100%;
+  outline: none;
+  color: var(--color-text-main);
+  font-size: 0.9rem;
+}
+
+.sort-box {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.sort-box select {
+  padding: 0.45rem 0.9rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  background-color: var(--color-bg);
+  color: var(--color-text-main);
+  outline: none;
+  cursor: pointer;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+/* Grid de Produtos Bento Style */
+.produtos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.produto-card {
+  background-color: #FFFFFF;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  overflow: hidden;
+  transition: all var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.produto-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--color-terracota-light);
+}
+
+.produto-image-container {
+  position: relative;
+  width: 100%;
+  height: 260px;
+  background-color: var(--color-card-beige);
+  overflow: hidden;
+}
+
+.produto-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.produto-card:hover .produto-image {
+  transform: scale(1.06);
+}
+
+.produto-tag {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-full);
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  background-color: var(--color-terracota);
+  color: #FFFFFF;
+  z-index: 2;
+}
+
+.produto-favorite-btn {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-marrom);
+  z-index: 2;
+  transition: all var(--transition-fast);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border);
+}
+
+.produto-favorite-btn:hover,
+.produto-favorite-btn.active {
+  background-color: #FFFFFF;
+  color: #E74C3C;
+  transform: scale(1.1);
+}
+
+.produto-hover-actions {
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  width: 100%;
+  padding: 0.8rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.6rem;
+  background: linear-gradient(0deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100%);
+  transition: bottom var(--transition-normal);
+  z-index: 3;
+}
+
+.produto-card:hover .produto-hover-actions {
+  bottom: 0;
+}
+
+.btn-quickview {
+  background-color: #FFFFFF;
+  color: var(--color-marrom-dark);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.5rem 1.1rem;
+  border-radius: var(--radius-full);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-quickview:hover {
+  background-color: var(--color-verde-cacto);
+  color: #FFFFFF;
+}
+
+.produto-body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.produto-artesao {
+  font-size: 0.75rem;
+  color: var(--color-verde-cacto);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.4rem;
+}
+
+.produto-title {
+  font-family: var(--font-family-display);
+  font-size: 1.18rem;
+  font-style: italic;
+  color: var(--color-marrom-dark);
+  margin-bottom: 0.4rem;
+  line-height: 1.25;
+}
+
+.produto-rating {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: var(--color-sol);
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+}
+
+.produto-rating span {
+  color: var(--color-text-muted);
+  font-size: 0.78rem;
+  margin-left: 0.2rem;
+}
+
+.produto-footer {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.produto-price {
+  display: flex;
+  flex-direction: column;
+}
+
+.price-current {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--color-marrom-dark);
+}
+
+.price-old {
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+  text-decoration: line-through;
+}
+
+.btn-add-cart {
+  background-color: var(--color-verde-cacto);
+  color: #FFFFFF;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  font-weight: 700;
+  transition: all var(--transition-fast);
+}
+
+.btn-add-cart:hover {
+  background-color: var(--color-terracota);
+  transform: scale(1.1) rotate(90deg);
+}
+
+/* --------------------------------------------------------------------------
+   8. Seção Nossa História (Bento Box Pair)
+   -------------------------------------------------------------------------- */
+.historia-section {
+  padding: 4rem 0;
+  background-color: var(--color-bg);
+}
+
+.historia-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+.historia-media {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  min-height: 420px;
+}
+
+.historia-img-main {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.historia-badge-map {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: var(--color-verde-cacto);
+  color: #FFFFFF;
+  padding: 1rem 1.4rem;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  text-align: center;
+}
+
+.historia-badge-map strong {
+  color: var(--color-sol);
+  display: block;
+  font-size: 1rem;
+  font-family: var(--font-family-display);
+}
+
+.historia-badge-map p {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  opacity: 0.9;
+}
+
+.historia-content {
+  background-color: var(--color-card-beige);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  padding: 3.5rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.maps {
+  background-color: var(--color-card-beige);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  padding: 3.5rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.maps p {
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding-bottom: 0.9rem;
+
+}
+
+.historia-content .section-tag {
+  background-color: rgba(192, 94, 66, 0.1);
+  color: var(--color-terracota);
+  border-color: rgba(192, 94, 66, 0.2);
+}
+
+.historia-text {
+  color: var(--color-text-muted);
+  font-size: 1.02rem;
+  line-height: 1.7;
+  margin-bottom: 1.2rem;
+}
+
+.historia-quote {
+  padding: 1.2rem 1.5rem;
+  background-color: #FFFFFF;
+  border-left: 4px solid var(--color-terracota);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  margin: 1.5rem 0 2rem 0;
+  border: 1px solid var(--color-border);
+  border-left-width: 4px;
+}
+
+.historia-quote p {
+  font-family: var(--font-family-display);
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--color-marrom-dark);
+  margin-bottom: 0.4rem;
+}
+
+.historia-quote cite {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--color-terracota);
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* --------------------------------------------------------------------------
+   9. Galeria de Imagens (Bento Masonry Grid)
+   -------------------------------------------------------------------------- */
+.galeria-section {
+  padding: 4rem 0;
+  background-color: var(--color-bg);
+}
+
+.galeria-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 220px;
+  gap: 1.25rem;
+}
+
+.galeria-item {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border);
+}
+
+.galeria-item.tall {
+  grid-row: span 2;
+}
+
+.galeria-item.wide {
+  grid-column: span 2;
+}
+
+.galeria-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.galeria-item:hover img {
+  transform: scale(1.06);
+}
+
+.galeria-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(66, 51, 42, 0.88) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.5rem;
+  opacity: 0;
+  transition: opacity var(--transition-normal);
+  color: #FFFFFF;
+}
+
+.galeria-item:hover .galeria-overlay {
+  opacity: 1;
+}
+
+.galeria-overlay-title {
+  font-family: var(--font-family-display);
+  font-size: 1.2rem;
+  font-style: italic;
+  margin-bottom: 0.2rem;
+}
+
+.galeria-overlay-desc {
+  font-size: 0.82rem;
+  opacity: 0.88;
+}
+
+/* --------------------------------------------------------------------------
+   10. Depoimentos de Clientes (Featured Terracotta Bento Card)
+   -------------------------------------------------------------------------- */
+.depoimentos-section {
+  padding: 4rem 0;
+  background-color: var(--color-bg);
+}
+
+.depoimentos-slider {
+  max-width: 880px;
+  margin: 0 auto;
+}
+
+.depoimento-card {
+  background-color: var(--color-terracota);
+  color: #FFFFFF;
+  padding: 3.5rem 3rem;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: opacity var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+.depoimento-card::before {
+  content: '“';
+  position: absolute;
+  top: -20px;
+  right: 30px;
+  font-size: 12rem;
+  font-family: var(--font-family-display);
+  color: rgba(255, 255, 255, 0.08);
+  pointer-events: none;
+  line-height: 1;
+}
+
+.depoimento-quote-icon {
+  font-size: 2.5rem;
+  color: var(--color-sol);
+  margin-bottom: 1rem;
+  line-height: 1;
+}
+
+.depoimento-text {
+  font-family: var(--font-family-display);
+  font-size: 1.35rem;
+  font-style: italic;
+  color: #FFFFFF;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  max-width: 720px;
+}
+
+.depoimento-author {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.depoimento-avatar {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+}
+
+.depoimento-info {
+  text-align: left;
+}
+
+.depoimento-name {
+  font-weight: 700;
+  color: #FFFFFF;
+  font-size: 1rem;
+}
+
+.depoimento-location {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.8);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.depoimentos-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1.8rem;
+}
+
+.slider-dots {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.slider-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--color-areia-dark);
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+
+.slider-dot.active {
+  background-color: var(--color-terracota);
+  width: 26px;
+  border-radius: var(--radius-full);
+}
+
+/* --------------------------------------------------------------------------
+   11. Call To Action (CTA Bento Grid)
+   -------------------------------------------------------------------------- */
+.cta-section {
+  padding: 4rem 0;
+  background-color: var(--color-bg);
+}
+
+.cta-container {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+.cta-content {
+  background-color: var(--color-marrom-dark);
+  color: #FFFFFF;
+  border-radius: var(--radius-xl);
+  padding: 3.5rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cta-content .section-tag {
+  background-color: rgba(226, 154, 59, 0.15);
+  color: var(--color-sol);
+  border-color: rgba(226, 154, 59, 0.25);
+}
+
+.cta-title {
+  font-family: var(--font-family-display);
+  font-size: clamp(2rem, 3.5vw, 2.7rem);
+  font-style: italic;
+  color: #FFFFFF;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.cta-desc {
+  font-size: 1.05rem;
+  opacity: 0.88;
+  line-height: 1.6;
+}
+
+.cta-form {
+  background-color: #FFFFFF;
+  padding: 3rem 2.5rem;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+  color: var(--color-text-main);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cta-form h3 {
+  font-family: var(--font-family-display);
+  font-size: 1.4rem;
+  font-style: italic;
+  color: var(--color-marrom-dark);
+  margin-bottom: 0.4rem;
+}
+
+.cta-form p {
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.85rem 1.2rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  outline: none;
+  background-color: var(--color-bg);
+  font-size: 0.92rem;
+}
+
+.form-group input:focus {
+  border-color: var(--color-verde-cacto);
+  background-color: #FFFFFF;
+}
+
+.cta-form .btn {
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+/* --------------------------------------------------------------------------
+   12. Rodapé (Footer Bento Style)
+   -------------------------------------------------------------------------- */
+.site-footer {
+  background-color: #FFFFFF;
+  color: var(--color-text-main);
+  padding: 4rem 0 2rem 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr repeat(3, 1fr); 
+  gap: 2.5rem;
+  margin-bottom: 3.1rem;
+  align-items: center;
+  align-content: center;
+}
+
+.footer-brand .brand-name {
+  color: var(--color-verde-cacto);
+}
+
+.footer-brand p {
+  color: var(--color-text-muted);
+  font-size: 0.92rem;
+  margin: 1.2rem 0 1.5rem 0;
+  line-height: 1.6;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.social-link {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-main);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+}
+
+.social-link:hover {
+  background-color: var(--color-terracota);
+  color: #FFFFFF;
+  border-color: var(--color-terracota);
+  transform: translateY(-3px);
+}
+
+.footer-title {
+  font-family: var(--font-family-display);
+  font-size: 1.15rem;
+  font-style: italic;
+  color: var(--color-marrom-dark);
+  margin-bottom: 1.2rem;
+  position: relative;
+}
+
+.footer-title::after {
+  content: '';
+  display: block;
+  width: 28px;
+  height: 2px;
+  background-color: var(--color-terracota);
+  margin-top: 0.4rem;
+}
+
+.footer-links li {
+  margin-bottom: 0.8rem;
+}
+
+.footer-links a {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+  color: var(--color-terracota);
+  padding-left: 4px;
+}
+
+.footer-contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+}
+
+.footer-contact-item svg {
+  color: var(--color-verde-cacto);
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.footer-bottom {
+  padding-top: 2rem;
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+}
+
+/* --------------------------------------------------------------------------
+   13. Drawers, Modais e Componentes Interativos
+   -------------------------------------------------------------------------- */
+/* Overlay Escuro */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(4px);
+  z-index: 2000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-normal);
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Slide-out Carrinho (Cart Drawer Bento Style) */
+.cart-drawer {
+  position: fixed;
+  top: 0;
+  right: -440px;
+  width: 100%;
+  max-width: 420px;
+  height: 100vh;
+  background-color: #FFFFFF;
+  z-index: 2100;
+  box-shadow: -8px 0 30px rgba(0,0,0,0.15);
+  display: flex;
+  flex-direction: column;
+  transition: right var(--transition-normal);
+}
+
+.cart-drawer.active {
+  right: 0;
+}
+
+.cart-header {
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--color-bg);
+}
+
+.cart-header h3 {
+  font-family: var(--font-family-display);
+  font-size: 1.25rem;
+  font-style: italic;
+  color: var(--color-marrom-dark);
+}
+
+.cart-close-btn {
+  font-size: 1.4rem;
+  color: var(--color-marrom);
+}
+
+.cart-body {
+  padding: 1.5rem;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.cart-empty-state {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: var(--color-text-muted);
+}
+
+.cart-empty-state svg {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 1rem;
+  color: var(--color-areia-dark);
+}
+
+.cart-item {
+  display: flex;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--color-border);
+  align-items: center;
+}
+
+.cart-item-img {
+  width: 68px;
+  height: 68px;
+  border-radius: var(--radius-sm);
+  object-fit: cover;
+  background-color: var(--color-card-beige);
+}
+
+.cart-item-info {
+  flex: 1;
+}
+
+.cart-item-title {
+  font-family: var(--font-family-display);
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--color-marrom-dark);
+  margin-bottom: 0.2rem;
+}
+
+.cart-item-price {
+  font-weight: 800;
+  color: var(--color-terracota);
+  font-size: 0.92rem;
+}
+
+.cart-item-qty {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.4rem;
+}
+
+.qty-btn {
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.cart-item-remove {
+  color: #999;
+  font-size: 0.85rem;
+}
+
+.cart-item-remove:hover {
+  color: #E74C3C;
+}
+
+.cart-footer {
+  padding: 1.5rem;
+  border-top: 1px solid var(--color-border);
+  background-color: var(--color-bg);
+}
+
+.free-shipping-progress {
+  margin-bottom: 1.2rem;
+}
+
+.shipping-bar-bg {
+  height: 8px;
+  background-color: var(--color-areia-dark);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  margin-top: 0.4rem;
+}
+
+.shipping-bar-fill {
+  height: 100%;
+  background-color: var(--color-verde-cacto);
+  width: 60%;
+  transition: width var(--transition-normal);
+}
+
+.cart-summary-line {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--color-marrom-dark);
+  margin-bottom: 1.2rem;
+}
+
+/* Modal Quick View / Modal Espiada */
+.quickview-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -45%) scale(0.95);
+  width: 90%;
+  max-width: 840px;
+  background-color: #FFFFFF;
+  border-radius: var(--radius-xl);
+  z-index: 2100;
+  box-shadow: var(--shadow-lg);
+  opacity: 0;
+  pointer-events: none;
+  transition: all var(--transition-normal);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+}
+
+.quickview-modal.active {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.quickview-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-height: 85vh;
+  overflow-y: auto;
+}
+
+.quickview-media {
+  background-color: var(--color-card-beige);
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quickview-media img {
+  max-height: 360px;
+  object-fit: contain;
+  border-radius: var(--radius-md);
+}
+
+.quickview-details {
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.quickview-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 1.3rem;
+  background-color: var(--color-bg);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  border: 1px solid var(--color-border);
+}
+
+/* Lightbox para Galeria */
+.lightbox-modal {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.92);
+  z-index: 2200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-normal);
+}
+
+.lightbox-modal.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.lightbox-content {
+  max-width: 90vw;
+  max-height: 85vh;
+  position: relative;
+}
+
+.lightbox-content img {
+  max-width: 100%;
+  max-height: 85vh;
+  object-fit: contain;
+  border-radius: var(--radius-md);
+}
+
+.lightbox-caption {
+  color: #FFFFFF;
+  text-align: center;
+  margin-top: 1rem;
+  font-family: var(--font-family-display);
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: #FFFFFF;
+  font-size: 2rem;
+}
+
+/* Toast Notifications */
+.toast-container {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 3000;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.toast {
+  background-color: var(--color-marrom-dark);
+  color: #FFFFFF;
+  padding: 1rem 1.4rem;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  border-left: 4px solid var(--color-verde-cacto);
+  animation: toastIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  min-width: 280px;
+  font-size: 0.9rem;
+}
+
+@keyframes toastIn {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+/* Botão Flutuante Voltar ao Topo & WhatsApp */
+.floating-actions {
+  position: fixed;
+  bottom: 25px;
+  left: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  z-index: 900;
+}
+
+.btn-floating {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-fast);
+}
+
+.btn-whatsapp {
+  background-color: #25D366;
+  color: #FFFFFF;
+  font-size: 1.5rem;
+}
+
+.btn-whatsapp:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
+}
+
+.btn-back-top {
+  background-color: var(--color-marrom-dark);
+  color: #FFFFFF;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.btn-back-top.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.btn-back-top:hover {
+  background-color: var(--color-verde-cacto);
+  transform: translateY(-3px);
+}
+
+/* --------------------------------------------------------------------------
+   14. Responsividade (Media Queries)
+   -------------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .hero-content {
+    padding: 2.5rem 2rem;
+  }
+
+  .hero-image-wrapper {
+    min-height: 360px;
+  }
+
+  .diferenciais-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .historia-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .galeria-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cta-container {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .header-container {
+    height: 70px;
+  }
+
+  .nav-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100vh;
+    background-color: var(--color-bg);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 6rem 2rem 2rem 2rem;
+    box-shadow: -10px 0 30px rgba(0,0,0,0.15);
+    transition: right var(--transition-normal);
+    z-index: 1500;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .nav-menu.active {
+    display: flex;
+    right: 0;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .mobile-nav-toggle {
+    display: block;
+  }
+
+  .quickview-content {
+    grid-template-columns: 1fr;
+  }
+
+  .quickview-media img {
+    max-height: 240px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .galeria-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 200px;
+  }
+
+  .galeria-item.tall,
+  .galeria-item.wide {
+    grid-row: span 1;
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .diferenciais-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .hero-stats {
+    flex-wrap: wrap;
+    gap: 1.2rem;
+  }
+
+  .produtos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .galeria-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cart-drawer {
+    max-width: 100%;
+  }
+}

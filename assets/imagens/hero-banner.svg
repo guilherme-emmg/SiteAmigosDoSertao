@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F5EFEB" />
+      <stop offset="50%" stop-color="#EFE5DC" />
+      <stop offset="100%" stop-color="#E3D5C8" />
+    </linearGradient>
+    <linearGradient id="terracotaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D96B43" />
+      <stop offset="100%" stop-color="#A84422" />
+    </linearGradient>
+    <linearGradient id="cactusGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#3B7252" />
+      <stop offset="100%" stop-color="#1E3F2B" />
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="675" fill="url(#bgGrad)"/>
+
+  <!-- Sun Rays of Sertão -->
+  <circle cx="1000" cy="150" r="180" fill="#E29A3B" opacity="0.15"/>
+  <circle cx="1000" cy="150" r="120" fill="#E29A3B" opacity="0.25"/>
+
+  <!-- Shelf & Decor -->
+  <rect x="100" y="520" width="1000" height="24" fill="#5C3A21" rx="4"/>
+  <rect x="150" y="544" width="20" height="120" fill="#3A2312"/>
+  <rect x="1030" y="544" width="20" height="120" fill="#3A2312"/>
+
+  <!-- Large Terracotta Clay Vase -->
+  <path d="M 220 520 L 250 320 Q 250 250 320 250 Q 390 250 390 320 L 420 520 Z" fill="url(#terracotaGrad)" />
+  <ellipse cx="320" cy="250" rx="70" ry="15" fill="#C85A32" />
+  <path d="M 280 250 Q 320 220 360 250" stroke="#FFF" stroke-width="4" fill="none" opacity="0.6"/>
+  <!-- Tribal Geometric Carving -->
+  <path d="M 240 400 L 260 380 L 280 400 L 300 380 L 320 400 L 340 380 L 360 400 L 380 380 L 400 400" stroke="#FAF6F0" stroke-width="5" fill="none" opacity="0.8"/>
+  <path d="M 230 440 L 250 420 L 270 440 L 290 420 L 310 440 L 330 420 L 350 440 L 370 420 L 390 440 L 410 420" stroke="#FAF6F0" stroke-width="5" fill="none" opacity="0.8"/>
+
+  <!-- Indoor Plant in Vase -->
+  <path d="M 320 250 C 280 180, 200 150, 160 200 C 220 220, 290 230, 320 250 Z" fill="url(#cactusGrad)"/>
+  <path d="M 320 250 C 360 160, 440 120, 480 170 C 420 200, 350 220, 320 250 Z" fill="#2D5A3F"/>
+  <path d="M 320 250 C 300 120, 330 60, 360 100 C 350 160, 335 210, 320 250 Z" fill="#3B7252"/>
+
+  <!-- Woven Basket -->
+  <path d="M 520 520 L 540 380 Q 540 350 630 350 Q 720 350 720 380 L 740 520 Z" fill="#D8B58A" />
+  <ellipse cx="630" cy="350" rx="90" ry="18" fill="#C59B67"/>
+  <!-- Basket Pattern -->
+  <pattern id="basketWeave" width="20" height="20" patternUnits="userSpaceOnUse">
+    <line x1="0" y1="0" x2="20" y2="20" stroke="#A87B42" stroke-width="2"/>
+    <line x1="20" y1="0" x2="0" y2="20" stroke="#A87B42" stroke-width="2"/>
+  </pattern>
+  <path d="M 520 520 L 540 380 Q 540 350 630 350 Q 720 350 720 380 L 740 520 Z" fill="url(#basketWeave)" opacity="0.5"/>
+
+  <!-- Small Ceramic Pot & Cactus -->
+  <path d="M 800 520 L 815 420 Q 815 400 870 400 Q 925 400 925 420 L 940 520 Z" fill="#8C4126" />
+  <ellipse cx="870" cy="400" rx="55" ry="12" fill="#A84422"/>
+  <!-- Mandacaru Arms -->
+  <rect x="855" y="240" width="30" height="160" rx="15" fill="#2D5A3F"/>
+  <path d="M 830 300 Q 800 300 800 330 L 800 350 Q 800 365 825 365 L 855 365" fill="none" stroke="#2D5A3F" stroke-width="20" stroke-linecap="round"/>
+  <path d="M 910 280 Q 940 280 940 310 L 940 330 Q 940 345 915 345 L 885 345" fill="none" stroke="#2D5A3F" stroke-width="20" stroke-linecap="round"/>
+
+  <!-- Text Overlay Badge -->
+  <rect x="80" y="80" width="460" height="80" rx="12" fill="#FFF" opacity="0.9"/>
+  <text x="110" y="118" font-family="sans-serif" font-weight="bold" font-size="22" fill="#2D5A3F">AMIGOS DO SERTÃO</text>
+  <text x="110" y="145" font-family="sans-serif" font-size="15" fill="#5C3A21">Artesanato Autêntico do Nordeste Brasileiro</text>
+</svg>
