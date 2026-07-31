@@ -411,8 +411,16 @@ input, select, textarea {
 .top-bar-hero {
   display: flex;
   align-items: center;
+  height: 100%;
   gap: 0.6rem;
   margin-bottom: 1.5rem;
+}
+
+.top-bar-hero img {
+  height: 10rem;
+  width: 10rem;
+  max-width: 50%;
+  padding-right: 3%;
 }
 
 .hero-content::before {
