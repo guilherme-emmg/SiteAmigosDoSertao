@@ -542,7 +542,7 @@ setInterval(() => {
      ------------------------------------------------------------------------ */
   const testimonials = [
     {
-      text: "super recomendo,atendimento perfeito,os produtos todos de otima qualidade ,sempre com muitas novidades.voces estao de parabens.sucesssoooo",
+      text: "super recomendo, atendimento perfeito, os produtos todos de ótima qualidade, sempre com muitas novidades. Vocês estão de parabéns. Sucesssoooo",
       author: "Fernando Viana",
       location: "Ibirité, MG",
       avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80"
